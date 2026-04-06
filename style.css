@@ -18,3 +18,8 @@ body { background-color: #eaddcf; font-family: sans-serif; margin: 0; }
 .modal-buttons button { padding: 8px 15px; border-radius: 8px; border: none; cursor: pointer; }
 .btn-cancel { background: #eee; }
 .btn-submit { background: #8ba9eb; color: white; font-weight: bold; }
+/* 動画再生モーダル */
+#video-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; z-index: 200; }
+.video-wrapper { width: 95%; max-width: 800px; display: flex; flex-direction: column; align-items: flex-end; }
+.video-wrapper iframe { width: 100%; aspect-ratio: 16/9; }
+.close-video { color: white; margin-bottom: 10px; cursor: pointer; font-weight: bold; font-size: 16px; }
