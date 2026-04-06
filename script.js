@@ -12,7 +12,10 @@ function renderVideos(videosToRender) {
   videosToRender.forEach(video => {
     const card = document.createElement('div');
     card.className = 'archive-card';
-    card.onclick = () => window.open(`https://www.youtube.com/watch?v=${video.id}`);
+    
+    // タップした時にサイト内でYouTubeを開くように変更
+    card.onclick = () => openVideo(video.id);
+    
     card.innerHTML = `
       <img src="https://img.youtube.com/vi/${video.id}/mqdefault.jpg">
       <div class="card-info">
@@ -73,4 +76,16 @@ function showArchive() {
 function showMenu() {
   document.getElementById('menu-screen').style.display = 'flex';
   document.getElementById('archive-screen').style.display = 'none';
+}
+
+// 動画を開く
+function openVideo(id) {
+  document.getElementById('yt-player').src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+  document.getElementById('video-modal').style.display = 'flex';
+}
+
+// 動画を閉じる
+function closeVideo() {
+  document.getElementById('yt-player').src = ''; 
+  document.getElementById('video-modal').style.display = 'none';
 }
