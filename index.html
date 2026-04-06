@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リンクラ風UI</title>
+<style>
+  body {
+    /* 背景は画像を参考に薄い色にしています */
+    background-color: #eaddcf; 
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .menu-button {
+    width: 90%;
+    max-width: 350px;
+    height: 100px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* 文字を右側に寄せる */
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+  }
+
+  .sub-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .main-title {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+
+  /* スクコネ風ボタン（緑系のグラデーション） */
+  .btn-connect {
+    background: linear-gradient(135deg, #9ae0aa, #6fc88b);
+  }
+
+  /* 活動記録風ボタン（オレンジ・茶色系のグラデーション） */
+  .btn-story {
+    background: linear-gradient(135deg, #d8a273, #be7f4c);
+  }
+
+  /* カードボタン（デザイン指定がないため、青系のグラデーションにしています） */
+  .btn-card {
+    background: linear-gradient(135deg, #8ba9eb, #6688d4);
+  }
+</style>
+</head>
+<body>
+
+  <a href="#" class="menu-button btn-connect">
+    <div class="sub-title">VIDEO STREAMING</div>
+    <div class="main-title">スクールアイドルコネクト</div>
+  </a>
+
+  <a href="#" class="menu-button btn-story">
+    <div class="sub-title">STORY</div>
+    <div class="main-title">活動記録</div>
+  </a>
+
+  <a href="#" class="menu-button btn-card">
+    <div class="sub-title">COLLECTION</div>
+    <div class="main-title">カード</div>
+  </a>
+
+</body>
+</html>
